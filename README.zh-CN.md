@@ -1,18 +1,16 @@
 # egg-mongo
 
-Database ` mongo ` plug-in for ` egg ` provide ` mongo ` database access functions
+`mongo` 插件是为 `egg` 提供 `mongo` 数据库访问的功能
 
-#  Install
+#  安装
 
 ```
 $ npm i egg-mongo --save
 ```
 
-# Configuration
+# 配置
 
-Change `${app_root}/config/plugin.js` to enable MongoDB plugin:
-
-
+通过 `config/plugin.js` 配置启动 `MongoDB` 插件:
 ```
 exports.mongo = {
   enable: true,
@@ -20,10 +18,7 @@ exports.mongo = {
 };
 ```
 
-Configure database information in `${app_root}/config/config.default.js`:
-
-
-Simple database instance
+在 `config/config.${env}.js` 配置各个环境的数据库连接信息：
 
 ```
 mongo: {
@@ -37,7 +32,7 @@ mongo: {
 }
 ```
 
-#  Multiple database instance
+#  多数据源
 ```
 mongo: {
   urlConfig: [{
@@ -54,11 +49,11 @@ mongo: {
 ```
 
 
-[More database connection parameter details......](http://mongodb.github.io/node-mongodb-native/2.2/tutorials/connect/)
+[更多数据库链接参数详情......](http://mongodb.github.io/node-mongodb-native/2.2/tutorials/connect/)
 
-#  CRUD user guide
+#  使用方式
 
-`app/controller/home.js`
+`app/service/home.js`
 ```
 'use strict';
 module.exports = app => {
@@ -77,4 +72,4 @@ module.exports = app => {
 };
 ```
 
-[More......](https://github.com/mzTeamMeatMan/mongo-co)
+[更多......](https://github.com/mzTeamMeatMan/mongo-co)

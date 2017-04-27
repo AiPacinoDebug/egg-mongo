@@ -1,0 +1,46 @@
+{
+  "name": "egg-mongo",
+  "version": "1.0.0",
+  "description": "egg-mongo",
+  "main": "app.js",
+  "eggPlugin": {
+    "name": "mongo"
+  },
+  "scripts": {
+    "lint:core": "eslint --ext js,vue ",
+    "lint": "npm run lint:core -- ."
+  },
+  "keywords": [
+    "egg",
+    "mongo",
+    "database"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzTeamMeatMan/egg-mongo.git"
+  },
+  "author": "mzTeamMeatMan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzTeamMeatMan/egg-mongo/issues"
+  },
+  "homepage": "https://github.com/mzTeamMeatMan/egg-mongo#readme",
+  "dependencies": {
+    "babel-eslint": "~4.1.8",
+    "eslint": "~1.10.3",
+    "eslint-config-airbnb": "~3.0.0",
+    "eslint-loader": "~1.6.1",
+    "eslint-plugin-html": "~1.7.0",
+    "ghooks": "~2.0.0",
+    "mongo-co": "^1.0.0",
+    "validate-commit-msg": "~1.0.0"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
