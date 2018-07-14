@@ -32,3 +32,14 @@ mongo: {
   dbname: 'dbName'
 }
 ```
+
+```
+// app/controller/home.js
+class HomeController extends Controller {
+  async index() {
+    const testCollection = this.app.mongo.db.collection('testCollection');
+    collectionNames = await testCollection.find({}).toArray();
+    this.ctx.body = collectionNames;
+  }
+}
+```
